@@ -1,7 +1,7 @@
 export default class Validator {
   static validateUsername(name) {
-    const nameFormat = /^[a-z]\[w-]\[\.]*[d\d\d]\[a-z]\[w-]$/;
-    const maxDigits = /\d{3}/;
+    const nameFormat = /^[a-z][\w-]*[a-z]$/i;
+    const maxDigits = /\d{4}/;
     return nameFormat.test(name) && !maxDigits.test(name);
   }
 }
